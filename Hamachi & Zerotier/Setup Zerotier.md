@@ -13,7 +13,7 @@ Click the "Join Network" button, and a little window like [this](Reference-Pictu
 Don't click any of the extra boxes, and just copy and paste this (9f77fc393e3f074f) into the text box and click the "Join" button.
 
 
-Windows will then pop up a box on the right side of your screen that looks like [this](Reference-Pictures/Windows-Network_Popup).
+Windows will then pop up a box on the right side of your screen that looks like [this](Reference-Pictures/Windows-Network-Popup).
 Just click the "Yes" button.
 
 
