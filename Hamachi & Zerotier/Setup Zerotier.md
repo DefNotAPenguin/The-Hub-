@@ -8,12 +8,12 @@ There shouldn't be any kind of wizard or anything to press or setup so just inst
 
 
 Zerotier will automatically be in the System Tray on the right side of your taskbar, most likely at the bottom of your screen (is taskbar moving still a thing?).
-Right click the little Zerotier One icon and you will see something like [this](Reference-Pictures/Zerotier-System-Tray-Overview).
-Click the "Join Network" button, and a little window like [this](Reference-Pictures/Zerotier-Join-Network) will pop up.
+Right click the little Zerotier One icon and you will see something like this: ![alt text](https://github.com/DefNotAPenguin/Alternative-Softwares/blob/main/Reference%20Pictures/Zerotier%20System%20Tray%20Overview.jpg "Zerotier System Tray Overview").
+Click the "Join Network" button, and a little window like this: ![alt text](https://github.com/DefNotAPenguin/Alternative-Softwares/blob/main/Reference%20Pictures/Zerotier%20Join%20Network.png "Zerotier Join Network") will pop up.
 Don't click any of the extra boxes, and just copy and paste this (9f77fc393e3f074f) into the text box and click the "Join" button.
 
 
-Windows will then pop up a box on the right side of your screen that looks like [this](Reference-Pictures/Windows-Network-Popup).
+Windows will then pop up a box on the right side of your screen that looks like this: ![alt text](https://github.com/DefNotAPenguin/Alternative-Softwares/blob/main/Reference%20Pictures/Windows%20Network%20Popup.png "Windows Network Popup").
 Just click the "Yes" button.
 
 
@@ -58,3 +58,5 @@ accept ztdest 129450b482 and dport 443
 ;
 ```
 There's nothing else to change in Zerotier Central so that will be the end of this guide (finally).
+
+Credit to adam-p for their [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lines) for the image links.
