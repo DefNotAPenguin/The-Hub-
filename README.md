@@ -1,6 +1,7 @@
-# Alternative-Softwares
-This is a type of "hub" where, hopefully, in the future I will take a look at alternatives to popular softwares, examine them, compare them to each other, and make guides about them.
-This is mainly for people that don't particularly like certain softwares and want to find good alternatives for them.
+# The "Hub"
+This is a type of "hub" where, hopefully, in the future I will take a look at all kinds of things, and (hopefully) make some helpful guides or something about them.
+This can range from things like my thoughts about games, software comparisons, to even things like hardware comparison.
+If you're here, you probably know me on Discord or something.
 As I am definitely not a programmer or anything close to the sort, take some of my examinations with a grain of salt.
 I am examining these as essentially a "curious end-user" who knows enough about certain things to learn how to fix them incase they break, and with enough time on my hands to thoroughly look into something.
 
