@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Windows Stuff</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="everything">
+        <div class="Back">
+            <a href="../index.html">Go back to the Home Page</a>
+        </div>
+        <br>
+        <br>
+        <div class="Title">
+            <h2 class="Title">My Windows Stuff</h2>
+        </div>
+        <div class="Title-Divider"></div>
+        <div class="Description">
+            <h3 class="H"></p>
+        </div>
+        <div class="Watermark-Removal">
+            <h2 class="H">Windows Activation Watermark Removal</h2>
+            <div class="Divider"></div>
+            <div class="P1">
+                <p class="para">Windows's activation price is astronomically stupid (in my opinion), so I copied this batch file command from this <a href="https://thegeekpage.com/how-to-remove-activate-windows-watermark-in-windows-11/">this article</a>.</p>
+                <p class="para">All it does is get rid of the stupid watermark that Windows forces over everything.</p>
+                <p class="para">It occasionally bugs out when some games are running, so this is just to stop it from doing that, by completely hiding it.</p>
+                <p class="para">This does not stop the fact that you can't use certain settings (like default audio device?) but it at least gets rid of the watermark.</p>
+                <p class="para"><code><pre>@echo off                   
+taskkill /F /IM explorer.exe
+explorer.exe                
+exit                        </pre></code></p>
+            </div>
+        </div>
+        <div class="Other-Stuff">
+            <h2 class="H">Other Stuff</h2>
+            <div class="Divider"></div>
+            <div class="P1">
+                <p class="para">Random optimization stuff that I always forget (lol).</p>
+                <ul>
+                    <li>Install Windows offline (without Ethernet plugged in or WiFi connected)</li>
+                    <li>If online, completely disconnect OneDrive from all folders (OneDrive causes LOTS of issues)</li>
+                    <li>Name your PC (It helps if you ever need to get your hostname)</li>
+                    <li>Turn off Game Mode (It can cause issues and it's doesn't have many benefits, honestly)</li>
+                    <li>Turn Focus Assist on (It turns off the noise and counter in the bottom right, but keeps the notifications)</li>
+                </ul>
+            </div>
+            <div class="P2">
+                <h2 class="H">How to certify files (in SHA256)</h2>
+                <div class="Divider"></div>
+                <p class="para"><code>certUtil -hashfile</code><i> file </i><code>SHA256</code></p>
+            </div>
+            <div class="P3">
+                <h2 class="H">How to bypass paywalls when reading articles</h2>
+                <div class="Divider"></div>
+                <p class="para">add <code>12ft.io/</code> to the beginning of the article's link</p>
+            </div>
+        </div>
+        <div class="Back">
+            <a href="../index.html">Go back to the Home Page</a>
+        </div>
+        <div class="Top">
+            <a href="./How-to.html">Go back to the Top</a>
+        </div>
+    </div>
+</body>
+</html>

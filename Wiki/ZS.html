@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zerotier Setup</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="everything">
+        <div class="Back">
+            <a href="../index.html">Go back to the Home Page</a>
+        </div>
+        <br>
+        <br>
+        <div class="Title">
+            <h2 class="Title">Setting up Zerotier</h2>
+        </div>
+        <div class="Title-Divider"></div>
+        <div class="Description">
+            <p class="para-C">Ok, I originally made a guide for this on a Google Doc and GitHub, and it worked fine, but I prefer to use an actual website for this.</p>
+        </div>
+        <div class="ZT-Win">
+            <h2 class="H">How to Setup Zerotier (On Windows)</h2>
+            <div class="Divider"></div>
+            <div class="P1">
+                <p class="para">Well first of all, you're obviously going to need Zerotier One.</p>
+                <p class="para">You can download that <a href="https://www.zerotier.com/download/">here</a>.</p>
+                <p class="para">There shouldn't be any kind of wizard or anything to press or setup so just install it.</p>
+            </div>
+            <br>
+            <div class="P2">
+                <p class="para">Zerotier will automatically be in the System Tray on the right side of your taskbar, most likely at the bottom of your screen (is taskbar moving still a thing?).</p>
+                <p class="para Img">Right click the little Zerotier One icon</p> <img src="https://avatars.githubusercontent.com/u/4173285?s=200&v=4" alt="Tray Icon" /> <p class="para Img">and you will see something like this:</p> <img src="https://github.com/DefNotAPenguin/Alternative-Softwares/raw/main/Reference%20Pictures/Zerotier%20System%20Tray%20Overview.jpg" alt="Tray Menu" />
+                <br>
+                <p class="para Img">Click the "Join Network" button, and a little window like this:</p> <img src="https://github.com/DefNotAPenguin/Alternative-Softwares/raw/main/Reference%20Pictures/Zerotier%20Join%20Network.png" alt="Join Popup" /> <p class="para Img"> will pop up.</p>
+                <br>
+                <p class="para">Don't click any of the extra boxes, and just copy and paste <strong>(9f77fc393e3f074f)</strong> into the text box and click the "Join" button.</p>
+                <br>
+            </div>
+            <div class="P3">
+                <p class="para Img">Windows will then pop up a box on the right side of your screen that looks like this:</p> <img src="https://github.com/DefNotAPenguin/Alternative-Softwares/raw/main/Reference%20Pictures/Windows%20Network%20Popup.png" alt="Network Popup" /> <p class="para Img">Just click the "Yes" button.</p>
+                <p class="para">Aaaaand we're done... if we were just the end user.</p>
+                <p class="para">There is still a bunch of stuff we can and probably should do as the Network Owner.</p>
+                <p class="para">This should be in it's own section but I can do that later...</p>
+            </div>
+        </div>
+        <div class="ZT-ZTC">
+            <h2 class="H">How to Setup Zerotier (On Zerotier Central)</h2>
+            <div class="Divider"></div>
+            <p class="para">Oh. We're doing this now I guess.</p>
+            <br>
+            <p class="para"><strong>YOU CAN ONLY DO THIS IF YOU OWN A NETWORK</strong></p>
+            <br>
+            <p class="para">Go to <a href="https://my.zerotier.com/network">Zerotier Central</a> and login to your account and click on the network you want to edit.</p>
+            <br>
+            <div class="P1">
+                <p class="para">Change the name so that it's easy to distinguish between multiple networks (if you need to).</p>
+                <p class="para">Change your Access Control to PRIVATE, rather than PUBLIC, as if anybody sees your Network ID, they can join with full access to ping people and connect to other people's computers.</p>
+                <p class="para">You can change your Managed Route through the IPv4 Auto-Assign.</p>
+                <p class="para">Personally I like to use (10.244.*.*) as I find it easy to remember and type out.</p>
+                <p class="para">Don't touch IPv6, and just scroll all the way down to the Flow Rules.</p>
+            </div>
+            <br>
+            <p class="para"><strong>What are Flow Rules?</strong></p>
+            <br>
+            <div class="P2">
+                <p class="para">Flow Rules are essentially just codes that tell Zerotier to send traffic to places, or allow or disable some traffic.</p>
+                <p class="para">Part of our group uses Teamspeak, and I wanted to absolutely be sure that Zerotier is not our problem if Teamspeak breaks.</p>
+                <p class="para">Teamspeak has a bunch of ports that it uses (443, 6654 30033, 10011, 10022, 10080, 10443, 41144), and I wanted to add them to the flow rules in Zerotier.</p>
+                <p class="para">To tell Zerotier to accept them, I added this to the flow rules:</p> <pre><code># Teamspeak Port Routing              
+accept ztdest 129450b482 and dport 443
+        and dport 9987                
+        and dport 30033               
+        and dport 10011               
+        and dport 10022               
+        and dport 10080               
+        and dport 10443               
+        and dport 41144               
+;                                     </code></pre>
+                <br>
+                <p class="para">There's nothing else to change in Zerotier Central so that will be the end of this guide (finally).</p>
+            </div>
+            <div class="ZT-Com">
+                <h2 class="H">Useful Command Line Commands for Zerotier</h2>
+                <div class="Divider"></div>
+                <p class="code-para"><code><pre> zerotier-cli info </pre></code>Shows if Zerotier's service is on or not. If it returns as <pre><code> OFFLINE </code></pre>then simply go to services and restart it.</p>
+                <p class="code-para"><code><pre> zerotier-cli -v </pre></code>Explicitly tells you the version of Zerotier that you are running. This info can be seen in the info command, but this only tells you the version and nothing else.</p>
+            </div>
+            <div class="Back">
+                <a href="../index.html">Go back to the Home Page</a>
+            </div>
+            <div class="Top">
+                <a href="./How-to.html">Go back to the Top</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

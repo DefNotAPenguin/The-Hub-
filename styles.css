@@ -1,0 +1,125 @@
+.everything {
+    font-family: 'Open Sans', Calibri;
+    text-align: left;
+}
+
+.Mainbar {
+    font-family: 'Open Sans', Calibri;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.Main-Description {
+    text-align: center;
+}
+
+body {
+    background-color: #23272A;
+    color: #FFFFFF;
+}
+
+.Title {
+    text-align: center;
+    margin: auto;
+    margin-top: 0.5rem;
+}
+
+.Title-Divider {
+    border: 0.5px solid #c0c0c0;
+    margin-left: 22rem;
+    margin-right: 22rem;
+    margin-bottom: 1rem;
+}
+
+code {
+    background-color: #c0c0c0;
+    color: #3b3b3b;
+    font-size: 16px;
+}
+
+pre {
+    font-size: 16px;
+}
+
+.para {
+    margin: auto;
+    font-size: 16px;
+    font-family: 'Open Sans', Calibri;
+    margin-bottom: 2px;
+}
+
+.para-C {
+    margin: auto;
+    font-size: 16px;
+    text-align: center;
+}
+
+a:link {
+    color: aquamarine;
+}
+
+a:visited {
+    color: aquamarine;
+}
+
+a:hover {
+    color: beige;
+}
+
+.Back {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.Top {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: right;
+}
+
+.Divider {
+    border: 0.5px solid #c0c0c0;
+    margin-left: 5rem;
+    margin-right: 35rem;
+    margin-bottom: 1rem;
+}
+
+.H {
+    text-align: left;
+    margin-bottom: 1px;
+    margin-left: 5rem;
+}
+
+.ZS {
+    margin-top: 5px;
+}
+
+.Img {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.sm-Divider {
+    border: 0.5px solid #c0c0c0;
+    margin-left: 1rem;
+    margin-right: 30rem;
+    margin-bottom: 1rem;
+}
+
+.code-para {
+    margin-bottom: 1px;
+    margin-top: 1px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.github {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}

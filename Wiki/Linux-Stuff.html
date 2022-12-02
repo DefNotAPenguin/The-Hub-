@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Linux Stuff</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="everything">
+        <div class="Back">
+            <a href="../index.html">Go back to the Home Page</a>
+        </div>
+        <br>
+        <br>
+        <div class="Title">
+            <h2 class="Title">My Linux Stuff</h2>
+        </div>
+        <div class="Title-Divider"></div>
+        <div class="Description">
+            <p class="para"><strong>Unless you're on Linux and specifically Arch Linux, there's a good chance some of this will not work for you.</strong></p>
+            <br>
+            <p class="para">If so, go somewhere else lol.</p>
+        </div>
+        <div class="Differences">
+            <h2 class="H">Differences between Linux and Windows</h2>
+            <div class="Divider"></div>
+            <ul>
+                <li>If you copy things from a browser or something, you can right click to paste it into the terminal. If you do, make sure to go to your settings menu, terminal settings, and turn off unsafe paste dialog. Now if you paste anything, it pastes exactly what you copied and not extra characters.</li>
+                <li>Learn how to use nano or Vim. On nano, Ctrl + X closes the file, on Vim, look it up. Built in text editors add extra stuff sometimes.</li>
+                <li>If you do a command that says "must be run as root", simply do <code>sudo !!</code> to run the command again as root.</li>
+                <li>Pacman commands require sudo, Yay doesn't. It's a whole meme too lol.</li>
+                <li>"Customize yo stuff!" Best thing about Linux is the insane customizability, regardless about distro, or anything.</li>
+                <li>Rolling windows is amazing, and I can't believe that Windows doesn't have it</li>
+                <li>Infinite Keyboard Shortcuts</li>
+            </ul>
+        </div>
+        <div class="Aliases">
+            <h2 class="H">Aliases</h2>
+            <div class="Divider"></div>
+            <div class="P1">
+                <p class="para">For some reason, looking up anything on these was super confusing for me.</p>
+                <p class="para">Either it was extremely complicated, or it was so specific that I couldn't see how it would work it for me.</p>
+                <p class="para">I'm going to try to make this simple, while showing every part of the process.</p>
+                <p class="para">We'll start with the code, then I'll break it down.</p>
+                <br>
+                <p class="para">First of all, open the file <code>~/.bashrc</code>. This can be done with either nano or vim.</p>
+            </div>
+            <div class="P2">
+                <h2 class="H">Update All Alias</h2>
+                <p class="para"><code>alias upd='echo "UPDATE ALL THE THINGS"; sudo pacman -Syu; yay'</code></p>
+                <br>
+                <p class="para"><code>alias upd</code> = Alias is the command that allows us to substitute any command, with our own command of choice. In this case, "upd" is the command I'm using, but you could replace that with literally anything you want.</p>
+                <p class="para"><code>echo "UPDATE ALL THE THINGS"</code> = Echo just types out whatever is in the quotes afterwards. Do remember that this is not a command, but is just raw text.</p>
+                <p class="para"><code>;</code> = This separates the commands. This is what allows me to run multiple commands in one. Without these, this command is impossible.</p>
+                <p class="para"><code>sudo pacman -Syu</code> = pacman is Arch Linux's Package Manager. Any official Arch Linux packages are in pacman. Syu is simply an argument for pacman that tells it to update all.</p>
+                <p class="para"><code>yay</code> = Yay is Arch Linux's community package manager. You could add an argument, such as -Syu, but yay actually defaults to updating all without any arguments.</p>
+            </div>
+            <div class="P3">
+                <h2 class="H">Xboxdrv DS5 Alias</h2>
+                <div class="Divider"></div>
+                <p class="para">You will need these things.</p>
+                <ul>
+                    <li><code>xboxdrv</code>. This is a package that you can download.</li>
+                    <li>A Dualsense Controller (PS5 Controller)</li>
+                </ul>
+                <p class="para"><code><pre>alias xds5='modprobe -r xpad; xboxdrv \
+                    --evdev /dev/input/by-id/usb-Sony_Interactive_Entertainment_Wireless_Controller-if03-event-joystick \
+                    --evdev-absmap ABS_HAT0X=dpad_x,ABS_HAT0Y=dpad_y,ABS_X=X1,ABS_Y=Y1,ABS_RX=X2,ABS_RY=Y2,ABS_Z=LT,ABS_RZ=RT \
+                    --evdev-keymap BTN_SOUTH=A,BTN_EAST=B,BTN_NORTH=Y,BTN_WEST=X,BTN_START=start,BTN_MODE=guide,BTN_SELECT=back \
+                    --evdev-keymap BTN_TL=LB,BTN_TR=RB,BTN_TL2=LT,BTN_TR2=RT,BTN_THUMBL=TL,BTN_THUMBR=TR \
+                    --axismap -y1=y1,-y2=y2 \
+                    --mimic-xpad \
+                    --detach-kernel-driver \
+                    --force-feedback \
+                    --silent'</pre></code></p>
+                <p class="para"><code>alias xds5</code> = The alias command. In this case xds5 is my command, but you could obviously change it.</p>
+                <p class="para"><code>modprobe -r xpad</code> = Unloads the xpad module. This is basically required as the xpad module would cause problems.</p>
+                <p class="para"><code>xboxdrv</code> = The xboxdrv command. If you have a supported controller you could just run this and it should theoretically work.</p>
+                <p class="para"><i>evdev and axismap stuff</i> = All the rebinds to translate the PS5 Controller's inputs into xinput.</p>
+                <p class="para"><code>-- mimic-xpad</code> = Forces the emulated controller to have force feedback ability.</p>
+                <p class="para"><code>--detach-kernel-driver</code> = Detaches the original Linux driver from the controller. Only here to be redundant.</p>
+                <p class="para"><code>--force-feedback</code> = Forces the emulated controller to have force feedback ability.</p>
+                <p class="para"><code>--silent</code> = Stops xboxdrv from showing all controller events on the terminal.</p>
+            </div>
+        </div>
+        <div class="Extra-Commands">
+            <h2 class="H">Extra Commands (not explaining these)</h2>
+            <div class="Divider"></div>
+            <div class="P1">
+                <p class="para"><code>sudo chmod +x (path)</code> = executable file</p>
+                <p class="para"><code>sudo chmod 777 (path)</code> = full permissions to file (Don't do this)</p>
+                <p class="para"><code>cd ~/(Directory)</code> = Direct Terminal to specific Directory (Can also just right click in file explorer to open Terminal here)</p>
+                <p class="para"><code>cd ~</code> = Direct Terminal back to Root Directory (Used to undo the cd from any Terminal)</p>
+                <p class="para"><code>archlinux-java</code> = Java Command Line Interface</p>
+                <p class="para"><code>archlinux-java</code> = List of installed Java Environments (Gives Java Env Name)</p>
+                <p class="para"><code>archlinux-java</code> = Set specific Java Environment Version (Copy Java Env Name exactly from Status)</p>
+                <p class="para"><code>("~/(Directory)/":) ./(Executable file name)</code> = Execute file within specified Directory</p>
+                <p class="para"><code>java -Xms(amount)M -Xmx(amount)M</code> = Set Java program initial heap size and maximum heap size (M can be replaced with G for Gigabytes)</p>
+            </div>
+            <div class="P2">
+                <h2 class="H">Extra Arguments for Stuff</h2>
+                <div class="Divider"></div>
+                <p class="para">Copy this for Minecraft Forge Modpacks</p>
+                <p class="para"><code>-Dfml.earlyprogrsswindow=false</code></p>
+                <br>
+                <p class="para">Copy this to use Feral Gamemode on Steam Games</p>
+                <p class="para"><code>LD_PRELOAD=$LD_PRELOAD:/usr/\$LIB/libgamemodeauto.so %command%</code></p>
+                <br>
+                <p class="para">Copy this to use second GPU on a program</p>
+                <p class="para"><code>DRI_PRIME=1</code></p>
+                <br>
+            </div>
+            <div class="P3">
+                <p class="para"></p>
+            </div>
+        </div>
+        <div class="Back">
+            <a href="../index.html">Go back to the Home Page</a>
+        </div>
+        <div class="Top">
+            <a href="./How-to.html">Go back to the Top</a>
+        </div>
+    </div>
+</body>
+</html>

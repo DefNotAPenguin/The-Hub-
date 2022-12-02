@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolatey Scripts</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="everything">
+        <div class="Back">
+            <a href="../index.html">Go back to the Home Page</a>
+        </div>
+        <br>
+        <br>
+        <div class="Title">
+            <h2 class="Title">Chocolatey Scripts</h2>
+        </div>
+        <div class="Title-Divider"></div>
+        <div class="Description">
+            <p class="para">Ok, here's the thing. I end up wiping my computer A LOT.</p>
+            <p class="para">It's not like I'm doing anything suspicious, or anything like that, it's just that I end up using a lot of beta software or updates or something.</p>
+            <p class="para">Most recently, I was on Windows 11 Insider Preview, and my computer would blue screen every few hours, regardless of what I had open.</p>
+            <p class="para">I ended up having to completely reinstall Windows, which let me change how my partitions were setup at least, but otherwise it was a huge pain to find all the software that I had before.</p>
+            <p class="para">As I don't have Microsoft OneDrive setup, as it is the reason my computer sometimes stops working entirely, I do not have backups of any files or anything, other than stuff like this GitHub repository, or Google Cloud or something.</p>
+            <br>
+            <p class="para">This entire thing is done using chocolatey, a software designed for mass downloading a specific "suite" of software for things like fleet use.</p>
+            <p class="para">I have copy pasted their Powershell script for setting up and installing chocolatey.</p>
+        </div>
+        <div class="Start">
+            <h2 class="H">Start from Here</h2>
+            <div class="Divider"></div>
+            <div class="P1">
+                <p class="para">Open Powershell/Terminal with Admin Privliges</p>
+            </div>
+            <div class="P2">
+                <p class="para">Run <code>Get-ExecutionPolicy</code> and hope for something other than Restricted.</p>
+                <p class="para">If it returns with Restricted, run <code>Set-ExecutionPolicy AllSigned</code> to change it.</p>
+                <p class="para">Run <code><pre>Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+ </pre></code> to install Chocolatey.</p>
+            </div>
+            <div class="P3">
+                <h2 class="H">Important Stuff</h2>
+                <div class="Divider"></div>
+                <p class="para">Run <code>choco install firefox zerotier-one putty winscp treesizefree peazip reaper mpc-hc k-litecodecpackfull cpu-z gpu-z parsec dotnetcore-desktopruntime vcredist140 -y</code></p>
+                <h2 class="H">Less Important Stuff</h2>
+                <div class="Divider"></div>
+                <p class="para">Run <code>choco install discord steam-client epicgameslauncher battle.net ubisoft-connect -y</code></div>
+                <h2 class="H">Non-Important Stuff</h2>
+                <div class="Divider"></div>
+                <p class="para">Run <code>choco install tidal -y</code></div>
+            </div>
+        </div>
+        <div class="Woah">
+            <h2 class="H">Woah Woah Woah, Slow Down, What Software am I Downloading?</h2>
+            <div class="Divider"></div>
+            <div class="P1">
+                <p class="para">Alright, starting from the top (or beginning?):</p>
+            </div>
+            <div class="P2">
+                <p class="para"><code>discord</code>: Social Media platform that I personally don't enjoy using, but am essentially forced to use it due to everyone I know using it.</p>
+                <p class="para"><code>firefox</code>: The best browser in my eyes. No it's not the most private of browsers, but it's not built on Chromium, which is the main benefit. Chromium is awful and if you don't know why, go ahead and keep using it.</p>
+                <p class="para"><code>steam-client</code>: Steam. The best video game launcher ever. Period.</p>
+                <p class="para"><code>zerotier-one</code>: There's another page in the wiki for this.</p>
+                <p class="para"><code>epicgameslauncher</code>: Epic Games Launcher. Maybe the second best video games launcher?</p>
+                <p class="para"><code>battle.net</code>: Owned by Blizzard. Anything Blizzard is probably on here.</p>
+                <p class="para"><code>ubisoft-connect</code>: Ubisoft Connect. Maybe the most hated video game launcher to many, not by me. I generally enjoy using it.</p>
+                <p class="para"><code>putty</code>: Actually called PuTTY. It's an entirely free SSH client with a perfect UI for my uses.</p>
+                <p class="para"><code>winscp</code>: WinSCP is a SFTP client. Similar to PuTTY, but instead of a remote terminal, it's a remote file manager.</p>
+                <p class="para"><code>treesizefree</code>: The free version of a disk space manager. Everyone I know has one they like, this is mine.</p>
+                <p class="para"><code>peazip</code>: A utility to do all kinds of things with all kinds of codecs that the default file manager doesn't do. I prefer it over 7zip or WinRar personally.</p>
+                <p class="para"><code>reaper</code>: A DAW that I use to add filters and boost my microphone. I have yet to find a microphone setup on Windows that picks up my voice properly, so I have to boost the hell out of my mic. I paid for the license so I didn't have to wait the 5 seconds.</p>
+                <p class="para"><code>mpc-hc</code>: Media Player Classic Home Cinema edition. I prefer it over VLC Media Player, and both are significantly better than the built-in Media Player.</p>
+                <p class="para"><code>k-litecodecpackfull</code>: K-Lite Codec Pack full version. You could probably just download the Standard version, but I have yet to see or use a codec that full doesn't support.</p>
+                <p class="para"><code>cpu-z</code>: CPU monitoring software. Simple as that. Only used for checking very specific things.</p>
+                <p class="para"><code>gpu-z</code>: Same as Cpu-z, but for Graphics Cards.</p>
+                <p class="para"><code>parsec</code>: Software for remote accessing a desktop. Instead of a terminal, or a file manager, this lets me use someone's computer from across the country for various reasons.</p>
+                <p class="para"><code>dotnetcore-desktopruntime</code>: Microsoft .NET Core Desktop Runtime. This is used for so many things, mainly for <a href="https://github.com/Ryochan7/DS4Windows">Ryochan7's DS4Windows</a>.</p>
+                <p class="para"><code>vcredist-all</code>: Downloads all Microsoft Visual C++ Runtime versions. Saves me from having to go to the Microsoft website, just like the .NET Runtime.</p>
+                <p class="para"><code>tidal</code>: Tidal is basically Spotify, with less songs but significantly higher sound quality.</p>
+                <p class="para"><code>roccatswarm</code>: Roccat Swarm is Roccat's software for controlling</p>
+                <p class="para"><code>-y</code>: skips chocolatey asking if I really want to download this stuff.</p>
+                <p class="para">If you need different packages than the ones I listed here, go to this <a href="https://community.chocolatey.org/packages">this website</a>. That is the chocolatey package list website, so anything you might need, just type the name into the search bar and it might be there.</p>
+            </div>
+        </div>
+        <div class="Missing-Stuff">
+            <h2 class="H">Wait, isn't there stuff missing here?</h2>
+            <div class="Divider"></div>
+            <div class="P1">
+                <p class="para">Yeah, some software is definitely missing here.</p>
+                <p class="para">The reason for that is that not everything that I use has a chocolatey script.</p>
+                <p class="para">Some things still need downloading from the specific websites, or I prefer to download from the website directly.</p>
+            </div>
+            <br>
+            <div class="P2">
+                <p class="para"><a href="https://www.nvidia.com/en-us/geforce/geforce-experience/">Nvidia Geforce Experience</a>: This is pretty self explanatory.</p>
+                <p class="para"><a href="https://www.amd.com/en/support">AMD Drivers</a>: The AMD Support page for downloading drivers for all AMD Products.</p>
+                <p class="para"><a href="https://www.intel.com/content/www/us/en/products/docs/arc-discrete-graphics/software/arc-control.html">Intel Arc Control</a>: Intel Arc Control for the Intel Arc Graphics Cards. (I bought an Arc A750)</p>
+                <p class="para"><a href="https://github.com/supermerill/SuperSlicer">SuperSlicer</a>: Open Source slicer software that I personally prefer using over Cura. Nothing wrong with any other slicers, I just prefer this one.</p>
+                <p class="para"><a href="https://www.presonus.com/products/Universal-Control">Personus Universal Control</a>: Control Software for Presonus Audio devices. Required if you have a Presonus Interface.</p>
+                <p class="para"><a href="https://downloads.focusrite.com/focusrite">Focusrite Drivers</a>: Drivers for Focusrite Audio devices. Required if you have a Focusrite Interface.</p>
+                <p class="para"><a href="https://vb-audio.com/Voicemeeter/banana.htm">Voicemeeter Banana</a>: Audio software for splitting and/or combining audio channels. Basically required if you have an interface.</p>
+                <p class="para"><a href="https://github.com/Ryochan7/DS4Windows">DS4Windows</a>: Software needed to convert Dualsense or DS4 controllers into Xinput. I use a Dualsense controller simply because I find it more comfortable to use.</p>
+                <p class="para"><a href="https://steelseries.com/gg">SteelSeries GG</a>: SteelSeries Engine for customizing peripherals with Clip Recording built in.</p>
+                <p class="para"><a href="https://github.com/obsproject/obs-studio">OBS Studio</a>: Open Broadcaster Software for recording videos, clips, or streaming. (Use replay buffer for Clip recording)</p>
+                <p class="para"><a href="https://support.roccat.com/s/downloads?language=en_US&co=en_US">Roccat Swarm Software</a>: Roccat Software for customizing peripherals.</p>
+                <p class="para"><a href="https://www.garyshood.com/rsclient/">RSClient</a>: AutoClicker made for RuneScape but works with everything. Sadly doesn't have right click support.</p>
+                <p class="para"><a href="https://www.logitechg.com/en-us/innovation/g-hub.html">Logitech G Hub</a>: Logitech G Hub. I personally don't like using it, but I have a Logitech G920, and I need the software to use the wheel.</p>
+                <p class="para"><a href="https://prismlauncher.org/">Prism Launcher</a>: Prism Launcher is a fork of MultiMC, owned by a group of much better people. Previously I had MultiMC, and PolyMC, but both have had problems with the devs, so I dropped them both. Prism Launcher so far seems to be better, but only time will tell. Same features as MultiMC.</p>
+                <p class="para"><a href="https://x4fab.itch.io/ac-content-manager">Assetto Corsa Content Manager</a>: Assetto Corsa Content Manager. I have the paid version, so I use itch.io.</p>
+            </div>
+        </div>
+        <div class="Back">
+            <a href="../index.html">Go back to the Home Page</a>
+        </div>
+        <div class="Top">
+            <a href="./How-to.html">Go back to the Top</a>
+        </div>
+    </div>
+</body>
+</html>
