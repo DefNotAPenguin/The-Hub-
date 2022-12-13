@@ -10,59 +10,101 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://defnotapenguin.github.io/The-Hub-/" />
     <meta property="og:description" content="The Hub Wiki converted to an actual website." />
-    <meta property="og:image" content="https://github.com/DefNotAPenguin/The-Hub-/blob/main/Reference%20Pictures/The%20Hub%20Website.png" />
+    <meta property="og:image" content="./Reference Pictures/The Hub Website.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1500" />
     <meta property="og:image:height" content="500" />
     <meta property="og:image:alt" content="The Hub Website Image" />
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles2.css">
 </head>
 <body>
     <div class="everything Mainbar">
+        <div class="topnav">
+            <a class="active" href="./index 2.html" style="float:left;">The "Hub"</a>
+            <div class="dropdown" style="float:right;">
+                <button class="dropbtn">Linux Stuff
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content right-fix">
+                  <a href="./Wiki/Linux-Stuff.html">My Linux Stuff</a>
+                  <a href="./Wiki/Desktop-Environments.html">Linux Desktop Environments</a>
+                </div>
+            </div>
+            <div class="dropdown" style="float:right;">
+                <button class="dropbtn">Windows Stuff
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="./Wiki/Choco-Scripts.html">Chocolatey Scripts</a>
+                  <a href="./Wiki/Windows-Stuff.html">My Windows Stuff</a>
+                </div>
+            </div>
+            <div class="dropdown" style="float:right;">
+                <button class="dropbtn">Software
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="./Wiki/H&Z.html">Hamachi vs Zerotier (A Comparison)</a>
+                  <a href="./Wiki/ZS.html">Zerotier Setup Guide</a>
+                  <a href="./Wiki/MC-Launchers.html">Minecraft Launchers</a>
+                  <a href="./Wiki/M-S-Services.html">Music Streaming Services</a>
+                </div>
+            </div>
+        </div>
         <div class="Title">
-            <h1>The "Hub"</h1>
+            <h1 class="Title">Welcome to The "Hub"!</h1>
         </div>
-        <div class="Main-Description">
-            <h3>I wanted to do something like CNN's home page, but that looks hard. This will do.</h3>
+        <div class="Title-Divider"></div>
+        <div class="Description left-fix">
+            <div class="P1">
+            <p class="para">If you're here, you probably know me on Discord or something and I probably told you to come here.</p>
+            <p class="para">This is the home page, where the only thing here is this greeting.</p>
+            <p class="para">This is a type of "hub" where, hopefully, in the future I will take a look at all kinds of things, and (hopefully) make some helpful guides or something about them.</p>
+            <p class="para">This can range from things like my thoughts about games, software comparisons, to even things like hardware comparison.</p>
+            </div>
+            <div class="P2">
+            <p class="para">As I am definitely not a programmer or anything close to the sort, take some of my examinations with a grain of salt.</p>
+            <p class="para">I am examining these as essentially a "curious end-user" who knows enough about certain things to learn how to fix them incase they break, and with enough time on my hands to thoroughly look into something.</p>
+            </div>
+            <div class="P3">
+            <p>This came to mind after trying to guide someone through Github, only to see them be confused the entire time.</p>
+            </div>
         </div>
-        <div class="Content">
-            <h2>The Mainbar</h2>
+        <div class="Text left-fix">
+            <h2 class="H">Text</h2>
+            <div class="Divider"></div>
+            <p class="para">In case you haven't noticed from any of the other pages, I like to write exactly how I talk.</p>
+            <p class="para">I feel like this makes reading the text a lot easier, as it sounds more "fluid", at least in my mind.</p>
+            <p class="para">As long as you read it as if I'm talking, certain sentences might make more sense.</p>
+            <p class="para">I'm not a big fan of the "command" talk when it's unnecessary.</p>
         </div>
-        <ul class="Mainbar">
-            <li class="How-to"><a href="./Wiki/How-to.html">How to use this Website</a></li>
-        </ul>
-        <div class="Mainbar">
-            <h2 class="Software">Software</h2>
+        <div class="Hyperlinks left-fix">
+            <h2 class="H">Hyperlinks</h2>
+            <div class="Divider"></div>
+            <p class="para">In case you don't know what a hyperlink is, this <a href="index.html">blue text</a> is one.</p>
+            <p class="para">Simply clicking on it will take you to the page that I intend for you to go to.</p>
+            <p class="para">In this case, that hyperlink will take you right back to this page, but on some pages it might take you to a product's website.</p>
         </div>
-        <ul class="Mainbar">
-            <li class="H&Z"><a href="./Wiki/H&Z.html">Hamachi vs Zerotier (A Comparison)</a></li>
-            <ul class="Mainbar">
-                <li class="ZS"><a href="./Wiki/ZS.html">Zerotier Setup</a></li>
-            </ul>
-            <li class="Launchers"><a href="./Wiki/MC-Launchers.html">Minecraft Launchers</a></li>
-            <li class="Music-Streaming-Services"><a href="./Wiki/M-S-Services.html">Music Streaming Services</a></li>
-        </ul>
-        <div class="Mainbar">
-            <h2 class="Windows-Stuff">Windows Stuff</h2>
+        <div class="CL&B left-fix">
+            <h2 class="H">Code Lines and Blocks</h2>
+            <div class="Divider"></div>
+            <p><code>This is a code line.</code></p>
+            <p class="para">These are direct commands that I use, copy pasted directly to this website.</p>
+            <p class="para">These are generally pretty safe to just copy paste, but if I can I will try to explain the command.</p>
+            <p class="para">My programming skills are very bad so while I personally don't understand everything, I will try to explain the things I do understand.</p>
+            <pre><code>This is a    
+    code     
+    block.   </code></pre>
+            <p>These are really only used when I have commands that are really long.</p>
+            <p>If a command is <i>really</i> long, then I will add the extra space under it for you to drag your cursor down instead of across the entire page.</p>
         </div>
-        <ul class="Mainbar">
-            <li class="Choco-Scripts"><a href="./Wiki/Choco-Scripts.html">Chocolatey Scripts</a></li>
-            <li class="My-Windows-Stuff"><a href="./Wiki/Windows-Stuff.html">My Windows Stuff</a></li>
-        </ul>
-        <div class="Mainbar">
-            <h2 class="Linux-Stuff">Linux Stuff</h2>
+        <div class="Images left-fix">
+            <h2 class="H">Images</h2>
+            <div class="Divider"></div>
+            <p class="para">There's really nothing interesting to the images.</p>
+            <p class="para">Sometimes I will use an image that I do not own, all credits go to the original owner/s.</p>        
         </div>
-        <ul class="Mainbar">
-            <li class="My-Linux-Stuff"><a href="./Wiki/Linux-Stuff.html">My Linux Stuff</a></li>
-            <li class="Desktop-Enviornments"><a href="./Wiki/Desktop-Environments.html">Linux Desktop Environments</a></li>
-        </ul>
-        <br>
-        <br>
-        <br>
-        <h2 class="GitHub-Page"><a class="github" href="https://github.com/DefNotAPenguin/The-Hub-">Go to the GitHub page!</a></h2>
-        <br>
-        <br>
-        <h2 class="GitHub-Page"><a class="github" href="https://github.com/DefNotAPenguin/The-Hub-/wiki">Go to the original GitHub wiki!</a></h2>
     </div>
 </body>
 </html>
