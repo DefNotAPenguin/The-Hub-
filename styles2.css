@@ -32,6 +32,11 @@ it's most likely not mine (lmao). */
     color: beige;
 }
 
+.Section-Links {
+    text-align: center;
+    border: 1px solid cadetblue;
+}
+
 /* The dropdown container */
 .dropdown {
     float: left;
@@ -92,9 +97,4 @@ it's most likely not mine (lmao). */
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
-}
-
-.Section-Links {
-    text-align: center;
-    border: 1px solid cadetblue;
 }
