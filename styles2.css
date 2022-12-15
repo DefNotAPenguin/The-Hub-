@@ -11,11 +11,13 @@ it's most likely not mine (lmao). */
 /* Style the links inside the navigation bar */
 .topnav a {
     float: right;
+    background-color: #282D2F;
     color: #FFFFFF;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
     font-size: 17px;
+    border: 1px solid cadetblue;
 }
     
 /* Change the color of links on hover */
@@ -25,8 +27,8 @@ it's most likely not mine (lmao). */
 }
     
 /* Add a color to the active/current link */
-.topnav a.active {
-    background-color: seagreen;
+.topnav a:active {
+    background-color: burlywood;
     color: beige;
 }
 
@@ -90,4 +92,9 @@ it's most likely not mine (lmao). */
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.Section-Links {
+    text-align: center;
+    border: 1px solid cadetblue;
 }
