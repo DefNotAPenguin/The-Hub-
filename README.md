@@ -5,7 +5,7 @@ If you're here, you probably know me on Discord or something.
 As I am definitely not a programmer or anything close to the sort, take some of my examinations with a grain of salt.
 I am examining these as essentially a "curious end-user" who knows enough about certain things to learn how to fix them incase they break, and with enough time on my hands to thoroughly look into something.
 
-### I HIGHLY RECOMMEND YOU GO TO THE WIKI, I UPDATE THE WIKI FAR MORE OFTEN THAN THIS
+### I HIGHLY RECOMMEND YOU GO TO THE WIKI OR THE WEBSITE, I UPDATE BOTH FAR MORE OFTEN THAN THE REPO
 
 
 # Softwares
