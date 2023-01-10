@@ -84,7 +84,7 @@
                 <p class="para">Part of our group uses Teamspeak, and I wanted to absolutely be sure that Zerotier is not our problem if Teamspeak breaks.</p>
                 <p class="para">Teamspeak has a bunch of ports that it uses (443, 6654 30033, 10011, 10022, 10080, 10443, 41144), and I wanted to add them to the flow rules in Zerotier.</p>
                 <p class="para">To tell Zerotier to accept them, I added this to the flow rules:</p> <pre><code># Teamspeak Port Routing              
-accept ztdest 129450b482 and dport 443
+accept ztdest 1234567890 and dport 443
         and dport 9987                
         and dport 30033               
         and dport 10011               
